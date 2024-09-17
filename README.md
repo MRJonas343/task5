@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fake Data Generator Web Application 🌐
 
-## Getting Started
+## Description 📋
 
-First, run the development server:
+This web application generates realistic, random fake user data using Next.js, Next UI, and Faker.js. The app allows users to generate and view data in a table format, supporting infinite scrolling and region-specific formatting for names, addresses, and phone numbers. Additionally, the app allows users to introduce errors in the data to simulate entry mistakes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The data is generated using a combination of user-defined seed values and page numbers, ensuring consistent results for the same seed across multiple sessions. No database is required for this application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features 🛠️
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Region Selection**: Choose from multiple regions (e.g., USA, Mexico, Poland) to adjust the formatting of names, addresses, and phone numbers.
+- **Error Simulation**: Specify the number of errors per record using a slider (0–10) and a number field (max 1000). Supported errors include deleting, adding, and swapping characters.
+- **Seed Value**: Enter or generate a random seed to ensure the same data is produced consistently.
+- **Infinite Scrolling**: The table starts with 20 records, and as the user scrolls down, 10 more records are loaded.
+- **Data Consistency**: Changing the region or seed regenerates the data, while adjusting the error count modifies only the errors in the data, not the original values.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Requirements ⚙️
 
-## Learn More
+1. **Node.js**: Ensure Node.js is installed.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Setup ✍️
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone <REPOSITORY_URL>
+    cd <REPOSITORY_NAME>
+    ```
 
-## Deploy on Vercel
+2. **Install dependencies**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    or
+
+    ```bash
+    bun i
+    ```
+
+3. **Run the project**:
+
+    ```bash
+    npm run dev
+    ```
+
+    or
+
+    ```bash
+    bun dev
+    ```
+
+## Application Functionality 🖥️
+
+- **Region Selection**: Choose from available regions (USA, Mexico, Poland) to format names, addresses, and phone numbers appropriately.
+- **Error Simulation**: Adjust the number of errors per record (0 to 10 via a slider or 0 to 1000 using a number input). Supported errors include:
+    - **Delete**: Removes a random character from a field.
+    - **Add**: Inserts a random character at a random position.
+    - **Swap**: Switches two adjacent characters.
+- **Seed Value**: Enter a custom seed or use the random generator button to produce consistent results.
+- **Infinite Scrolling**: Start with 20 records, then load an additional 10 records as you scroll.
+
+Enjoy creating and managing your fake data! 🎉

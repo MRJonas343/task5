@@ -150,8 +150,7 @@ const FakeTable = () => {
 					bottomContent={
 						hasMore && (
 							<div className="flex w-full justify-center">
-								{/* // @ts-ignore */}
-								<div ref={loaderRef}>
+								<div ref={loaderRef as React.RefObject<HTMLDivElement>}>
 									<Spinner color="default" />
 								</div>
 							</div>

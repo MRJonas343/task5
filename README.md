@@ -23,8 +23,8 @@ The data is generated using a combination of user-defined seed values and page n
 1. **Clone the repository**:
 
     ```bash
-    git clone <REPOSITORY_URL>
-    cd <REPOSITORY_NAME>
+    git clone https://github.com/MRJonas343/task5/tree/master
+    cd task5
     ```
 
 2. **Install dependencies**:

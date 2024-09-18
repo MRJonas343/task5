@@ -82,7 +82,7 @@ export const Toolbar: FC<ToolbarProps> = ({
 					onChange={(e) => handleErrorsChange(e.target.value)}
 					type="range"
 					min="0"
-					max="1000"
+					max="10"
 				/>
 				<Input
 					value={String(numberOferrors)}
